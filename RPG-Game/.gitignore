@@ -1,0 +1,37 @@
+# Unity specific
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+[Uu]ser[Ss]ettings/
+
+# Exclude Visual Studio files
+.vscode/
+*.sln
+*.csproj
+*.unityproj
+*.pidb
+*.user
+*.suo
+*.booproj
+*.svd
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Exclude other unnecessary files
+*.apk
+*.aab
+*.tmp
+*.bak
+*.swp
+
+# Include essential Unity directories
+!Assets/
+!ProjectSettings/
+!Packages/
