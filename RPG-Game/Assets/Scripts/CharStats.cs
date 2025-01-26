@@ -7,7 +7,9 @@ public class CharStats : MonoBehaviour
     public string chartName;
     public int playerLevel = 1;
     public int playerEXP;   
-
+    public int[] expToNextLevel;
+    public int maxLevel=100;
+    public int baseEXP = 1000;
 
     public int currentHP;
     public int maxHP=100;
@@ -23,7 +25,13 @@ public class CharStats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        expToNextLevel = new int[maxLevel];
+        expToNextLevel[1] = baseEXP;
+
+        for (int i = 2; i < expToNextLevel.Length; i++)
+        {
+            expToNextLevel[i] = Mathf.FloorToInt(expToNextLevel[i - 1] * 1.05f);
+        }
     }
 
     // Update is called once per frame
