@@ -9,6 +9,7 @@
 [Uu]ser[Ss]ettings/
 
 # Exclude Visual Studio files
+.vs/
 .vscode/
 *.sln
 *.csproj
