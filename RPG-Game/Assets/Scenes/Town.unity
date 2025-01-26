@@ -263,13 +263,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 21727613637070990, guid: 987bf33310ec52d4a9e4c727355e402c, type: 3}
+      propertyPath: orthographic size
+      value: 7.282204
+      objectReference: {fileID: 0}
     - target: {fileID: 2008215260807893485, guid: 987bf33310ec52d4a9e4c727355e402c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.809999
+      value: -9.1
       objectReference: {fileID: 0}
     - target: {fileID: 2008215260807893485, guid: 987bf33310ec52d4a9e4c727355e402c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.56
+      value: 4.6
       objectReference: {fileID: 0}
     - target: {fileID: 2008215260807893485, guid: 987bf33310ec52d4a9e4c727355e402c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13043,7 +13047,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -22.45, y: -317.414}
+  m_AnchoredPosition: {x: -22.449951, y: -317.414}
   m_SizeDelta: {x: -94.977, y: -706.377}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1819793387
@@ -13270,12 +13274,17 @@ MonoBehaviour:
   chartName: Tim
   playerLevel: 1
   playerEXP: 250
+  currentEXP: 0
+  expToNextLevel: 
+  maxLevel: 100
+  baseEXP: 1000
   currentHP: 0
   maxHP: 100
   currentMP: 0
   maxMP: 30
-  strength: 0
-  defence: 0
+  mpLvlBonus: 
+  strength: 15
+  defence: 12
   wpnPwr: 0
   armPwr: 0
   equippedWpn: 
