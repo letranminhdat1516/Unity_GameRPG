@@ -7,6 +7,7 @@ public class CharStats : MonoBehaviour
     public string chartName;
     public int playerLevel = 1;
     public int playerEXP;   
+    public int currentEXP;
     public int[] expToNextLevel;
     public int maxLevel=100;
     public int baseEXP = 1000;
@@ -37,6 +38,18 @@ public class CharStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKey(KeyCode.K))
+        {
+            AddEXP(500);
+        }
+    }
+    public void AddEXP(int expToAdd) {
+        currentEXP += expToAdd;
+
+        if (currentEXP > expToNextLevel[playerLevel])
+        {
+            currentEXP -= expToNextLevel[playerLevel];
+            playerLevel++;
+        }
     }
 }
