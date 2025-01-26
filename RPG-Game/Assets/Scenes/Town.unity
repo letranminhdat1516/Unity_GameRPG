@@ -3694,8 +3694,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -18.234, y: 20.709}
-  m_SizeDelta: {x: 443.747, y: 121.962}
+  m_AnchoredPosition: {x: -31.045, y: -0.642}
+  m_SizeDelta: {x: 469.369, y: 79.259}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &542021251
 CanvasRenderer:
@@ -13177,7 +13177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - Welcome to Town!
-  isPerson: 1
+  isPerson: 0
 --- !u!61 &2073112056
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13233,6 +13233,64 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -13.48, y: 9.54, z: -0.010529526}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2134756023
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2134756025}
+  - component: {fileID: 2134756024}
+  m_Layer: 0
+  m_Name: PlayerStat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2134756024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134756023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb18d592c25410249ac209e8eeb21318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chartName: Tim
+  playerLevel: 1
+  playerEXP: 250
+  currentHP: 0
+  maxHP: 100
+  currentMP: 0
+  maxMP: 30
+  strength: 0
+  defence: 0
+  wpnPwr: 0
+  armPwr: 0
+  equippedWpn: 
+  equippedArmr: 
+  charImage: {fileID: 0}
+--- !u!4 &2134756025
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134756023}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.062657, y: 6.311936, z: -10.097849}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13329,3 +13387,4 @@ SceneRoots:
   - {fileID: 492923313}
   - {fileID: 1075795801}
   - {fileID: 2073112057}
+  - {fileID: 2134756025}
