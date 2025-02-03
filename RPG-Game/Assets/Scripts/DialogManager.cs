@@ -37,7 +37,9 @@ public class DialogManager : MonoBehaviour
                     if (currentLine >= dialogLines.Length)
                     {
                         dialogBox.SetActive(false);
-                        PlayerController.instance.canMove = true;
+                        // Set when press left mouse dialogActive to fasle
+                        // call center game manager set show dialog 
+                        GameManager.instance.dialogActive = false;
                     }
                     else
                     {
@@ -62,7 +64,9 @@ public class DialogManager : MonoBehaviour
         dialogBox.SetActive(true);
         justStarted = true;
         nameBox.SetActive(isPerson);
-        PlayerController.instance.canMove = false;
+        //PlayerController.instance.canMove = false;
+        //set dialog show with can't move player
+        GameManager.instance.dialogActive = true;
     }
     //Check "n-" npc or player dialog
     public void checkIfName()

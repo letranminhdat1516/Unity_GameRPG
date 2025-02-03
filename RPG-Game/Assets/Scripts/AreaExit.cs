@@ -35,6 +35,8 @@ public class NewBehaviourScript : MonoBehaviour
         if(other.tag == "Player") // when object = Player => go to new scence
         {
             PlayerController.instance.areaTransitionName = areaTransitionName;
+            // Set when go exit sence fadingBetweenAreas to true
+            GameManager.instance.fadingBetweenAreas = true;
 
             //SceneManager.LoadScene(areaToLoad);
             shouldLoadAfterFade = true;

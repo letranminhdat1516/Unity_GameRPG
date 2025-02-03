@@ -10,6 +10,8 @@ public class AreaEntrance : MonoBehaviour
     {
      StartCoroutine(SetPlayerPosition());
      UIFade.instance.FadeFromBlack();
+     // Set when go entrance sence fadingBetweenAreas to fasle
+     GameManager.instance.fadingBetweenAreas = false;
     }
 
     // Update is called once per frame
@@ -19,7 +21,7 @@ public class AreaEntrance : MonoBehaviour
     }
     private IEnumerator SetPlayerPosition()
     {
-    yield return new WaitForEndOfFrame(); // Đợi đến khi cảnh được tải hoàn toàn
+    yield return new WaitForEndOfFrame(); // Wait sence loaded 
     if (transitionName == PlayerController.instance.areaTransitionName)
     {
         PlayerController.instance.transform.position = transform.position;
