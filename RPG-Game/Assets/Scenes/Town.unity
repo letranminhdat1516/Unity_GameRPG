@@ -3564,6 +3564,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 438861415199060165, guid: 81603af90432b4b4d855d0e4c434dfbe, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 438861415199060165, guid: 81603af90432b4b4d855d0e4c434dfbe, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1212042264550441524, guid: 81603af90432b4b4d855d0e4c434dfbe, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -3647,6 +3655,22 @@ PrefabInstance:
     - target: {fileID: 2617138892046132754, guid: 81603af90432b4b4d855d0e4c434dfbe, type: 3}
       propertyPath: m_Name
       value: UI Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6484506314767768359, guid: 81603af90432b4b4d855d0e4c434dfbe, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6484506314767768359, guid: 81603af90432b4b4d855d0e4c434dfbe, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802365114288482876, guid: 81603af90432b4b4d855d0e4c434dfbe, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802365114288482876, guid: 81603af90432b4b4d855d0e4c434dfbe, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12899,10 +12923,6 @@ PrefabInstance:
     - target: {fileID: 578456060714302920, guid: 8024d86f2b7786c4da4ab0182ebbc604, type: 3}
       propertyPath: currentEXP
       value: 138
-      objectReference: {fileID: 0}
-    - target: {fileID: 578456060714302920, guid: 8024d86f2b7786c4da4ab0182ebbc604, type: 3}
-      propertyPath: expToNextLevel.Array.size
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3355232119156512649, guid: 8024d86f2b7786c4da4ab0182ebbc604, type: 3}
       propertyPath: m_Name
