@@ -12928,6 +12928,74 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 4340933069567802865, guid: 8024d86f2b7786c4da4ab0182ebbc604, type: 3}
+      propertyPath: itemHeld.Array.size
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4340933069567802865, guid: 8024d86f2b7786c4da4ab0182ebbc604, type: 3}
+      propertyPath: itemHeld.Array.data[4]
+      value: HP Potion
+      objectReference: {fileID: 0}
+    - target: {fileID: 4340933069567802865, guid: 8024d86f2b7786c4da4ab0182ebbc604, type: 3}
+      propertyPath: itemHeld.Array.data[7]
+      value: Iron Armor
+      objectReference: {fileID: 0}
+    - target: {fileID: 4340933069567802865, guid: 8024d86f2b7786c4da4ab0182ebbc604, type: 3}
+      propertyPath: itemHeld.Array.data[22]
+      value: Leather Armor
+      objectReference: {fileID: 0}
+    - target: {fileID: 4340933069567802865, guid: 8024d86f2b7786c4da4ab0182ebbc604, type: 3}
+      propertyPath: itemHeld.Array.data[28]
+      value: Mana Potion
+      objectReference: {fileID: 0}
+    - target: {fileID: 4340933069567802865, guid: 8024d86f2b7786c4da4ab0182ebbc604, type: 3}
+      propertyPath: numberOfItems.Array.size
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4340933069567802865, guid: 8024d86f2b7786c4da4ab0182ebbc604, type: 3}
+      propertyPath: referenceItem.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4340933069567802865, guid: 8024d86f2b7786c4da4ab0182ebbc604, type: 3}
+      propertyPath: numberOfItems.Array.data[4]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4340933069567802865, guid: 8024d86f2b7786c4da4ab0182ebbc604, type: 3}
+      propertyPath: numberOfItems.Array.data[7]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4340933069567802865, guid: 8024d86f2b7786c4da4ab0182ebbc604, type: 3}
+      propertyPath: referenceItem.Array.data[0]
+      value: 
+      objectReference: {fileID: 3930656567888418484, guid: 04f17a71e0002474ebf6d812415a23a4, type: 3}
+    - target: {fileID: 4340933069567802865, guid: 8024d86f2b7786c4da4ab0182ebbc604, type: 3}
+      propertyPath: referenceItem.Array.data[1]
+      value: 
+      objectReference: {fileID: 2160309940022683524, guid: b1127e46256d48d46871bb615147f8a8, type: 3}
+    - target: {fileID: 4340933069567802865, guid: 8024d86f2b7786c4da4ab0182ebbc604, type: 3}
+      propertyPath: referenceItem.Array.data[2]
+      value: 
+      objectReference: {fileID: 8170702034413543558, guid: 4b0e261ff8718a745b896fe86e69b4f2, type: 3}
+    - target: {fileID: 4340933069567802865, guid: 8024d86f2b7786c4da4ab0182ebbc604, type: 3}
+      propertyPath: referenceItem.Array.data[3]
+      value: 
+      objectReference: {fileID: 3327132832187643334, guid: a6a9ec56f615b33478f7523c6932a632, type: 3}
+    - target: {fileID: 4340933069567802865, guid: 8024d86f2b7786c4da4ab0182ebbc604, type: 3}
+      propertyPath: referenceItem.Array.data[4]
+      value: 
+      objectReference: {fileID: 2333149083447793808, guid: 347ab151711e5ea498a897e10fb168d1, type: 3}
+    - target: {fileID: 4340933069567802865, guid: 8024d86f2b7786c4da4ab0182ebbc604, type: 3}
+      propertyPath: referenceItem.Array.data[5]
+      value: 
+      objectReference: {fileID: 4870382954295289381, guid: eef1e5d9bb34e36448e1558456b292f0, type: 3}
+    - target: {fileID: 4340933069567802865, guid: 8024d86f2b7786c4da4ab0182ebbc604, type: 3}
+      propertyPath: numberOfItems.Array.data[22]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4340933069567802865, guid: 8024d86f2b7786c4da4ab0182ebbc604, type: 3}
+      propertyPath: numberOfItems.Array.data[28]
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6456526207137578653, guid: 8024d86f2b7786c4da4ab0182ebbc604, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.142004
