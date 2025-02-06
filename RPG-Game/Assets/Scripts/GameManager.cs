@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
         instance = this;
 
         DontDestroyOnLoad(gameObject);
+        SortItem();
     }
 
     // Update is called once per frame

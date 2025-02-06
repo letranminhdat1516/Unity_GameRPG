@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 5668511038468417088}
   - component: {fileID: 545919992455494057}
   - component: {fileID: 2333149083447793808}
+  - component: {fileID: 4811952388214498367}
+  - component: {fileID: 6550378750887957178}
   m_Layer: 0
   m_Name: HP Potion
   m_TagString: Untagged
@@ -110,3 +112,50 @@ MonoBehaviour:
   affectStr: 0
   weaponStrength: 0
   armorStrength: 0
+--- !u!58 &4811952388214498367
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5462082156639594291}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.77
+--- !u!114 &6550378750887957178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5462082156639594291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e295bd2627742f5428aa9e082f521999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
