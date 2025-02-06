@@ -3556,58 +3556,6 @@ Transform:
   - {fileID: 1797427142}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1026161960 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5462082156639594291, guid: 347ab151711e5ea498a897e10fb168d1, type: 3}
-  m_PrefabInstance: {fileID: 2076673599}
-  m_PrefabAsset: {fileID: 0}
---- !u!58 &1026161961
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1026161960}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.77
---- !u!114 &1026161965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1026161960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e295bd2627742f5428aa9e082f521999, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1448182164
 GameObject:
   m_ObjectHideFlags: 0
@@ -12894,13 +12842,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5462082156639594291, guid: 347ab151711e5ea498a897e10fb168d1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1026161961}
-    - targetCorrespondingSourceObject: {fileID: 5462082156639594291, guid: 347ab151711e5ea498a897e10fb168d1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1026161965}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 347ab151711e5ea498a897e10fb168d1, type: 3}
 --- !u!1001 &1266688102604130852
 PrefabInstance:
