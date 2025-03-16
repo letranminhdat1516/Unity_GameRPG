@@ -21,13 +21,15 @@ public class Item : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+
     }
     public void Use(int charToUseOn)
     {
@@ -71,7 +73,7 @@ public class Item : MonoBehaviour
         }
         if (isArmor)
         {
-             if (selectedChar.equippedArmr != "")
+            if (selectedChar.equippedArmr != "")
             {
                 GameManager.instance.AddItem(selectedChar.equippedArmr);
             }

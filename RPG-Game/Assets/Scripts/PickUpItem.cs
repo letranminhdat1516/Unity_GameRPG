@@ -8,7 +8,8 @@ public class PickUpItem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
+
     }
 
     // Update is called once per frame
@@ -17,16 +18,19 @@ public class PickUpItem : MonoBehaviour
         if (canPickUp && Input.GetButtonDown("Fire1") && PlayerController.instance.canMove)
         {
             GameManager.instance.AddItem(GetComponent<Item>().itemName);
-            Destroy(gameObject); 
+            Destroy(gameObject);
+
         }
     }
-    private void OnTriggerEnter2D(Collider2D other){
+    private void OnTriggerEnter2D(Collider2D other)
+    {
         if (other.tag == "Player")
         {
             canPickUp = true;
         }
     }
-    private void OnTriggerExit2D(Collider2D other){
+    private void OnTriggerExit2D(Collider2D other)
+    {
         if (other.tag == "Player")
         {
             canPickUp = false;

@@ -15,18 +15,18 @@ public class UIFade : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      instance=this;
-      DontDestroyOnLoad(gameObject);
+        instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
     void Update()
     {
-          if(shouldFadeToBlack)
+        if (shouldFadeToBlack)
         {
-            fadeScreen.color = new Color(fadeScreen.color.r,fadeScreen.color.g,fadeScreen.color.b,
+            fadeScreen.color = new Color(fadeScreen.color.r, fadeScreen.color.g, fadeScreen.color.b,
             Mathf.MoveTowards(
-                fadeScreen.color.a,1f,fadeSpeed * Time.deltaTime
+                fadeScreen.color.a, 1f, fadeSpeed * Time.deltaTime
             ));
             if (fadeScreen.color.a == 1f)
             {
@@ -35,11 +35,11 @@ public class UIFade : MonoBehaviour
         }
         if (shouldFadeFromBlack)
         {
-            fadeScreen.color = new Color(fadeScreen.color.r,fadeScreen.color.g,fadeScreen.color.b,
+            fadeScreen.color = new Color(fadeScreen.color.r, fadeScreen.color.g, fadeScreen.color.b,
             Mathf.MoveTowards(
-                fadeScreen.color.a,0f,fadeSpeed * Time.deltaTime
+                fadeScreen.color.a, 0f, fadeSpeed * Time.deltaTime
             ));
-               if (fadeScreen.color.a == 1f)
+            if (fadeScreen.color.a == 1f)
             {
                 shouldFadeFromBlack = false;
             }
@@ -47,12 +47,12 @@ public class UIFade : MonoBehaviour
     }
     public void FadeToBlack()
     {
-        shouldFadeToBlack= true;
+        shouldFadeToBlack = true;
         shouldFadeFromBlack = false;
     }
     public void FadeFromBlack()
     {
-        shouldFadeToBlack= false;
+        shouldFadeToBlack = false;
         shouldFadeFromBlack = true;
     }
 }

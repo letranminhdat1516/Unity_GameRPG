@@ -54,7 +54,8 @@ public class DialogManager : MonoBehaviour
             }
         }
     }
-    public void ShowDiaLog(string[] newlines, bool isPerson) {
+    public void ShowDiaLog(string[] newlines, bool isPerson)
+    {
         dialogLines = newlines;
 
         currentLine = 0;
@@ -73,7 +74,7 @@ public class DialogManager : MonoBehaviour
     {
         if (dialogLines[currentLine].StartsWith("n-"))
         {
-            nameText.text = dialogLines[currentLine].Replace("n-","");
+            nameText.text = dialogLines[currentLine].Replace("n-", "");
             currentLine++;
         }
     }

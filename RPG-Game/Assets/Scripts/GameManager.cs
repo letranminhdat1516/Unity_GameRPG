@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public bool gameMenuOpen;
     public bool dialogActive;
     public bool fadingBetweenAreas;
-
+    public bool shopActive;
 
     public string[] itemHeld;
     public int[] numberOfItems;
@@ -31,10 +31,11 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameMenuOpen || dialogActive || fadingBetweenAreas)
+        if (gameMenuOpen || dialogActive || fadingBetweenAreas || shopActive)
         {
             PlayerController.instance.canMove = false;
-        }else
+        }
+        else
         {
             PlayerController.instance.canMove = true;
         }
@@ -47,47 +48,48 @@ public class GameManager : MonoBehaviour
             RemoveItem("blepp");
         }
     }
-public Item GetItemDetails(string itemToGrab)
-{
-    if (referenceItem == null || referenceItem.Length == 0)
+    public Item GetItemDetails(string itemToGrab)
     {
-        Debug.LogError("GetItemDetails: referenceItem chưa được khởi tạo hoặc rỗng!");
+        if (referenceItem == null || referenceItem.Length == 0)
+        {
+            Debug.LogError("GetItemDetails: referenceItem chưa được khởi tạo hoặc rỗng!");
+            return null;
+        }
+
+        itemToGrab = itemToGrab.Trim(); // Loại bỏ khoảng trắng thừa
+        foreach (Item item in referenceItem)
+        {
+            if (string.Equals(item.itemName, itemToGrab, System.StringComparison.OrdinalIgnoreCase))
+            {
+                return item;
+            }
+        }
+        Debug.LogWarning($"GetItemDetails: Không tìm thấy item '{itemToGrab}' trong referenceItem!");
         return null;
     }
-
-    itemToGrab = itemToGrab.Trim(); // Loại bỏ khoảng trắng thừa
-    foreach (Item item in referenceItem)
-    {
-        if (string.Equals(item.itemName, itemToGrab, System.StringComparison.OrdinalIgnoreCase))
-        {
-            return item;
-        }
-    }
-    Debug.LogWarning($"GetItemDetails: Không tìm thấy item '{itemToGrab}' trong referenceItem!");
-    return null;
-}
     public void SortItem()
     {
         bool itemAfterSpace = true;
         while (itemAfterSpace)
         {
             itemAfterSpace = false;
-        
-        for (int i = 0; i < itemHeld.Length-1   ; i++)
-        {
-            if (itemHeld[i] == "")
-            {
-                itemHeld[i] = itemHeld[i+1];
-                itemHeld[i+1]= "";
 
-                numberOfItems[i] = numberOfItems[i+1];
-                numberOfItems[i+1] = 0;
-                if (itemHeld[i] != "")
+            for (int i = 0; i < itemHeld.Length - 1; i++)
+            {
+                if (itemHeld[i] == "")
                 {
-                    itemAfterSpace = true; 
+                    itemHeld[i] = itemHeld[i + 1];
+                    itemHeld[i + 1] = "";
+
+                    numberOfItems[i] = numberOfItems[i + 1];
+                    numberOfItems[i + 1] = 0;
+                    if (itemHeld[i] != "")
+                    {
+                        itemAfterSpace = true;
+                    }
                 }
+
             }
-        }
         }
     }
     public void AddItem(string itemToAdd)
@@ -97,9 +99,9 @@ public Item GetItemDetails(string itemToGrab)
 
         for (int i = 0; i < itemHeld.Length; i++)
         {
-            if (itemHeld[i] == "" || itemHeld[i]==itemToAdd)
+            if (itemHeld[i] == "" || itemHeld[i] == itemToAdd)
             {
-                newItemPositon=i;
+                newItemPositon = i;
                 i = itemHeld.Length;
                 foundSpace = true;
             }
@@ -119,7 +121,8 @@ public Item GetItemDetails(string itemToGrab)
             {
                 itemHeld[newItemPositon] = itemToAdd;
                 numberOfItems[newItemPositon]++;
-            } else
+            }
+            else
             {
                 Debug.LogError(itemToAdd + " Does not exits!!");
             }
@@ -143,14 +146,15 @@ public Item GetItemDetails(string itemToGrab)
         if (foundItem)
         {
             numberOfItems[itemPosition]--;
-            if (numberOfItems[itemPosition] <= 0 )
+            if (numberOfItems[itemPosition] <= 0)
             {
                 itemHeld[itemPosition] = "";
             }
             GameMenu.instance.ShowItems();
-        }else
+        }
+        else
         {
-               Debug.LogError("Could not find "+ itemToRemove);
+            Debug.LogError("Could not find " + itemToRemove);
         }
     }
 }

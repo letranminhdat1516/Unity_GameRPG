@@ -12,10 +12,12 @@ public class PlayerController : MonoBehaviour
     public string areaTransitionName;
     private Vector3 bottomLeftLimit;
     private Vector3 TopRightLimit;
-    
+
+
     public bool canMove;
-    
+
     // Start is called before the first frame update
+
     void Start()
     {
         canMove = true;
@@ -38,7 +40,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
+
+
         if (canMove)
         {
             // Setup moving with input setting "Horizontal" & "Vertical"

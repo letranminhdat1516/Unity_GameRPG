@@ -9,13 +9,13 @@ public class CharStats : MonoBehaviour
     //public int playerEXP;   
     public int currentEXP;
     public int[] expToNextLevel;
-    public int maxLevel=100;
+    public int maxLevel = 100;
     public int baseEXP = 1000;
 
     public int currentHP;
-    public int maxHP=100;
+    public int maxHP = 100;
     public int currentMP;
-    public int maxMP=30;
+    public int maxMP = 30;
     public int[] mpLvlBonus;
     public int strength;
     public int defence;
@@ -44,7 +44,8 @@ public class CharStats : MonoBehaviour
             AddEXP(1000);
         }
     }
-    public void AddEXP(int expToAdd) {
+    public void AddEXP(int expToAdd)
+    {
         currentEXP += expToAdd;
 
         if (playerLevel < maxLevel)
@@ -70,7 +71,8 @@ public class CharStats : MonoBehaviour
                 maxMP += mpLvlBonus[playerLevel];
                 currentMP = maxMP;
             }
-        } 
+        }
+
         if (playerLevel >= maxLevel)
         {
             currentEXP = 0;

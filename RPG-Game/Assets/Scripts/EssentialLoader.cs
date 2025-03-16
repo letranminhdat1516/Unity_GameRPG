@@ -12,7 +12,7 @@ public class EssentialLoader : MonoBehaviour
     {
         if (UIFade.instance == null)
         {
-           UIFade.instance = Instantiate(UIScreen).GetComponent<UIFade>();
+            UIFade.instance = Instantiate(UIScreen).GetComponent<UIFade>();
         }
         if (PlayerController.instance == null)
         {
@@ -28,6 +28,7 @@ public class EssentialLoader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+
     }
 }

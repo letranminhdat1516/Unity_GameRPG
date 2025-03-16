@@ -286,7 +286,8 @@ namespace TMPro.Examples
                     m_lastIndex = -1;
                 }
             }
-            
+
+
         }
 
 

@@ -27,8 +27,9 @@ public class GameMenu : MonoBehaviour
     public Text[] itemCharChoiceNames;
     public static GameMenu instance;
     public Text goldText;
-    
+
     // Start is called before the first frame update
+
     void Start()
     {
         instance = this;
@@ -39,19 +40,24 @@ public class GameMenu : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire2"))
         {
-             // Debug.Log("Toggle Menu Button Pressed");
+            // Debug.Log("Toggle Menu Button Pressed");
+
             if (theMenu.activeInHierarchy)
             {
                 // theMenu.SetActive(false);
                 // GameManager.instance.gameMenuOpen = false;
-               //  Debug.Log("Menu closed");
-               CloseMenu();
+                //  Debug.Log("Menu closed");
+                CloseMenu();
             }
-            else {
-                theMenu.SetActive(true);    
-                UpdateMainStats(); 
-                GameManager.instance.gameMenuOpen = true;    
+            else
+            {
+                theMenu.SetActive(true);
+
+                UpdateMainStats();
+
+                GameManager.instance.gameMenuOpen = true;
                 // Debug.Log("Menu opened and stats updated");   
+
             }
         }
     }
@@ -60,21 +66,27 @@ public class GameMenu : MonoBehaviour
     {
         playerStats = GameManager.instance.playerStats;
 
-        for(int i = 0; i < playerStats.Length; i++)
+        for (int i = 0; i < playerStats.Length; i++)
         {
             if (playerStats[i].gameObject.activeInHierarchy)
             {
                 charStatHolder[i].SetActive(true);
-                
+
+
                 nameText[i].text = playerStats[i].chartName;
                 hpText[i].text = "HP: " + playerStats[i].currentHP + "/" + playerStats[i].maxHP;
                 mpText[i].text = "MP: " + playerStats[i].currentMP + "/" + playerStats[i].maxMP;
                 lvlText[i].text = "Level: " + playerStats[i].playerLevel;
-                expText[i].text = "" + playerStats[i].currentEXP + "/" + playerStats[i].expToNextLevel[playerStats[i].playerLevel];
+                expText[i].text =
+                    ""
+                    + playerStats[i].currentEXP
+                    + "/"
+                    + playerStats[i].expToNextLevel[playerStats[i].playerLevel];
                 expSlider[i].maxValue = playerStats[i].expToNextLevel[playerStats[i].playerLevel];
-                expSlider[i].value =  playerStats[i].currentEXP;
+                expSlider[i].value = playerStats[i].currentEXP;
                 charImage[i].sprite = playerStats[i].charImage;
-            }else
+            }
+            else
             {
                 charStatHolder[i].SetActive(false);
             }
@@ -84,15 +96,17 @@ public class GameMenu : MonoBehaviour
     public void ToggleWindow(int windowNumber)
     {
         UpdateMainStats();
-       //Debug.Log("WindowNumber: " + windowNumber);
+        //Debug.Log("WindowNumber: " + windowNumber);
         //Debug.Log("Window: " + (windows[windowNumber] != null ? windows[windowNumber].name : "null"));
+
 
         for (int i = 0; i < windows.Length; i++)
         {
             if (i == windowNumber)
             {
                 windows[i].SetActive(!windows[i].activeInHierarchy);
-          //      Debug.Log("Toggled: " + windows[i].name);
+                //      Debug.Log("Toggled: " + windows[i].name);
+
             }
             else
             {
@@ -123,10 +137,11 @@ public class GameMenu : MonoBehaviour
             statusButtons[i].GetComponentInChildren<Text>().text = playerStats[i].chartName;
         }
     }
-    public void StatusChar(int selected){
+    public void StatusChar(int selected)
+    {
         statusName.text = playerStats[selected].chartName;
-        statusHP.text =""+playerStats[selected].currentHP + "/" + playerStats[selected].maxHP;
-        statusMP.text =""+playerStats[selected].currentMP + "/" + playerStats[selected].maxMP;
+        statusHP.text = "" + playerStats[selected].currentHP + "/" + playerStats[selected].maxHP;
+        statusMP.text = "" + playerStats[selected].currentMP + "/" + playerStats[selected].maxMP;
         statusStr.text = playerStats[selected].strength.ToString();
         statusDef.text = playerStats[selected].defence.ToString();
         if (playerStats[selected].equippedWpn != "")
@@ -134,7 +149,7 @@ public class GameMenu : MonoBehaviour
             statusWpnEq.text = playerStats[selected].equippedWpn;
         }
         statusWpnPwr.text = playerStats[selected].wpnPwr.ToString();
-         if (playerStats[selected].equippedArmr != "")
+        if (playerStats[selected].equippedArmr != "")
         {
             statusArmrEq.text = playerStats[selected].equippedArmr;
         }
@@ -145,7 +160,7 @@ public class GameMenu : MonoBehaviour
                                     - playerStats[selected].currentEXP).ToString();
         statusImage.sprite = playerStats[selected].charImage;
     }
- public void ShowItems()
+    public void ShowItems()
     {
         GameManager.instance.SortItem();
         for (int i = 0; i < itemBtns.Length; i++)
@@ -157,7 +172,8 @@ public class GameMenu : MonoBehaviour
                 itemBtns[i].buttonImage.gameObject.SetActive(true);
                 itemBtns[i].buttonImage.sprite = GameManager.instance.GetItemDetails(GameManager.instance.itemHeld[i]).itemSpite;
                 itemBtns[i].amountText.text = GameManager.instance.numberOfItems[i].ToString();
-            } else
+            }
+            else
             {
                 itemBtns[i].buttonImage.gameObject.SetActive(false);
                 itemBtns[i].amountText.text = "";
@@ -175,7 +191,7 @@ public class GameMenu : MonoBehaviour
         }
         if (activeItem.isWeapon || activeItem.isArmor)
         {
-             useBtnText.text = "Equip";
+            useBtnText.text = "Equip";
         }
         itemName.text = activeItem.itemName;
         itemDes.text = activeItem.description;
@@ -190,7 +206,8 @@ public class GameMenu : MonoBehaviour
     public void OpenItemCharChoice()
     {
         itemCharChoiceMenu.SetActive(true);
-        
+
+
         for (int i = 0; i < itemCharChoiceNames.Length; i++)
         {
             itemCharChoiceNames[i].text = GameManager.instance.playerStats[i].chartName;
@@ -206,7 +223,8 @@ public class GameMenu : MonoBehaviour
         activeItem.Use(selectChar);
         CloseItemCharChoice();
     }
-} 
+}
+
 
 
 

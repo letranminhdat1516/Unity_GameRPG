@@ -23,7 +23,7 @@ public class NewBehaviourScript : MonoBehaviour
         if (shouldLoadAfterFade)
         {
             waitToLoad -= Time.deltaTime;
-            if (waitToLoad<=0)
+            if (waitToLoad <= 0)
             {
                 shouldLoadAfterFade = false;
                 SceneManager.LoadScene(areaToLoad);
@@ -32,7 +32,7 @@ public class NewBehaviourScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Player") // when object = Player => go to new scence
+        if (other.tag == "Player") // when object = Player => go to new scence
         {
             PlayerController.instance.areaTransitionName = areaTransitionName;
             // Set when go exit sence fadingBetweenAreas to true

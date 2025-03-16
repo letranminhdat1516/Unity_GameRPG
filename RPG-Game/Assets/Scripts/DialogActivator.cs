@@ -10,7 +10,8 @@ public class DialogActivator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
+
     }
 
     // Update is called once per frame
@@ -19,7 +20,7 @@ public class DialogActivator : MonoBehaviour
         // show dialog box next line we set
         if (canActivate && Input.GetButtonDown("Fire1") && !DialogManager.instance.dialogBox.activeInHierarchy)
         {
-            DialogManager.instance.ShowDiaLog(lines,isPerson);
+            DialogManager.instance.ShowDiaLog(lines, isPerson);
         }
     }
     private void OnTriggerEnter2D(Collider2D orther)
